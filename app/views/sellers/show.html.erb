@@ -1,0 +1,5 @@
+<h2><%= @seller.name %></h2>
+<%= @seller.link %><br><br>
+<% @seller.posts.each do |post| %>
+    <%= post.title %>
+<% end %>
