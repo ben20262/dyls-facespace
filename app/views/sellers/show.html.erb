@@ -1,7 +1,0 @@
-<h2><%= @seller.name %></h2>
-<%= @seller.link %><br><br>
-<ul>
-    <% @seller.posts.each do |post| %>
-        <%= link_to post.title, post_path(post) %>
-    <% end %>
-</ul>
