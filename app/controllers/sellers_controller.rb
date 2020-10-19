@@ -1,20 +1,12 @@
 class SellersController < ApplicationController
 
     def index
-        @sellers = Seller.all
-    end
-
-    def show
-        @seller = Seller.find_by(id: params[:id])
+        sellers = Seller.all
+        render json: sellers, include: :posts
     end
 
     def create
-        @seller = Seller.create(name: params[:name], link: params[:link])
-        redirect_to seller_path(@seller)
-    end
-
-    def destory
-
+        seller = Seller.create(name: params[:name], link: params[:link])
     end
 
 end
